@@ -1,18 +1,4 @@
-# CLAUDE.md
-
-This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
-
-## Project Overview
-
-A Python project (managed with `uv`) for testing and developing Claude Code agent skills (slash commands).
-
-## Commands
-
-```bash
-uv run python src/main.py   # Run the main script
-uv add <package>            # Add a dependency
-uv sync                     # Install dependencies
-```
+# Project Conventions
 
 ## Directory Structure
 
@@ -23,7 +9,8 @@ uv sync                     # Install dependencies
 ## Creating a Skill
 
 1. Create a directory under `.claude/skills/` named after the skill (e.g., `.claude/skills/my-skill/`)
-2. Inside that directory, create a `SKILL.md` file with YAML frontmatter:
+2. Inside that directory, create a `SKILL.md` file containing the skill definition
+3. `SKILL.md` must include a YAML frontmatter block with `name` and `description` fields, followed by the skill instructions:
 
 ```markdown
 ---
